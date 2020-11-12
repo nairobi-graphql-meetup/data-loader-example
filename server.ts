@@ -1,4 +1,5 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer, gql } = require("apollo-server");
+import { books, authors } from "./data"
 
 const typeDefs = gql`
   type Author {
@@ -20,11 +21,7 @@ const typeDefs = gql`
   }
 `;
 
-const books = [{ id: 1, author_id: 1, title: "Bravo Zero" }];
 
-const authors = [{ user_id: 1, first_name: "Ken", last_name: "Wamaria" }];
-
-// A map of functions which return data for the schema.
 const resolvers = {
   Query: {
     books: () => books,
@@ -37,6 +34,7 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+
 });
 
 server.listen().then(({ url }) => {
