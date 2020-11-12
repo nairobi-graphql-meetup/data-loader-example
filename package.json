@@ -1,0 +1,16 @@
+{
+  "name": "data-loader-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nairobi-graphql-meetup/data-loader-example.git",
+  "author": "Joe Ng'ethe <joeynimu@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^14.14.7"
+  },
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "graphql": "^15.4.0"
+  }
+}
